@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
+app.get('api/libros', (req, res) => res.json({
+    nombre:"prueba"
+}))
 
 // Routes
 app.use(require('./routes/index'));
